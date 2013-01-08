@@ -20,9 +20,8 @@ public class MainActivity extends Activity {
 	}
 
 	public void dial(View view) {
-		Intent intent = new Intent(Intent.ACTION_CALL);
-		intent.setData(Uri.parse("tel:" + edtiText.getText().toString()));
-		intent.addCategory(Intent.CATEGORY_DEFAULT);
+		Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"
+				+ edtiText.getText().toString()));
 		startActivity(intent);
 	}
 
