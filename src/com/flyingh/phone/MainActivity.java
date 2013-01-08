@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 
 	public void dial(View view) {
 		EditText edtiText = (EditText) findViewById(R.id.telphone);
-		Intent intent = new Intent(Intent.ACTION_DIAL);
+		Intent intent = new Intent(Intent.ACTION_CALL);
 		intent.setData(Uri.parse("tel:" + edtiText.getText().toString()));
 		intent.addCategory(Intent.CATEGORY_DEFAULT);
 		startActivity(intent);
