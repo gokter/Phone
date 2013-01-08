@@ -10,14 +10,16 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
+	private EditText edtiText;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		edtiText = (EditText) findViewById(R.id.telphone);
 	}
 
 	public void dial(View view) {
-		EditText edtiText = (EditText) findViewById(R.id.telphone);
 		Intent intent = new Intent(Intent.ACTION_CALL);
 		intent.setData(Uri.parse("tel:" + edtiText.getText().toString()));
 		intent.addCategory(Intent.CATEGORY_DEFAULT);
